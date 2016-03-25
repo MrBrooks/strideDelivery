@@ -14311,6 +14311,10 @@ $("#cart-items").mCustomScrollbar({
   // setHeight: 540,
   theme: "stride-scrollbar"
 });
+$(".locality").tooltip({
+  title: "Если населённый пункт совпадает с городом, это поле можно пропустить.",
+  trigger: "hover focus"
+});
 
 if($(window).width() < 979){
   mobileInit();
@@ -14328,8 +14332,12 @@ $("form").submit(function(){
     });
     anotherTooltip = false;
   }
+  
   inputs.each(function(){
-    if($(this).val().length == 0 || $(this).attr('data-status') == 'invalid'){
+    if($(this).attr("requiredd") == "true" && $(this).val().length == 0){
+      isValid = false;
+      $(this).addClass('invalid');
+    } else if($(this).attr('data-status') == 'invalid'){
       isValid = false;
       $(this).addClass('invalid');
     } else{

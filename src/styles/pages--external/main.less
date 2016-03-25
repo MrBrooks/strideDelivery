@@ -2,6 +2,7 @@
 
 body{
   background: #f2f2f0;
+  color: #505050;
 }
 #stride-delivery{
   width: 824px;
@@ -36,8 +37,12 @@ body{
   .btns{
     @media screen and (max-width: @mobile){
       text-align: center;
+      margin-bottom: 5px;
       &>button{
         float: none;
+        &:first-child{
+          margin-right: 2px;
+        }
       }
     }
   }
@@ -48,6 +53,7 @@ body{
     box-shadow: none;
     -webkit-appearance: none;
     border: 0;
+    text-transform: uppercase;
     @media screen and (max-width: @mobile){
       width: 49%;
     }
@@ -64,7 +70,7 @@ body{
       }
     }
     &:hover{
-      background-color:  #fdd000;
+      background-color:  #fde300;
     }
     &.active{
       background-color:  #fde300;
@@ -147,6 +153,13 @@ body{
   .free-delivery{
     background-color: #fff;
     padding: 28px 36px;
+    margin-top: 9px;
+    @media screen and (max-width: @mobile){
+      padding: 18px 24px;
+    }
+    p{
+      margin: 3px;
+    }
     p:last-child{
       font-weight: 700;
     }
@@ -272,11 +285,14 @@ body{
     height: 445px;
   }
   .where{
-    margin: 10px 0;
+    margin: 5px 0 10px;
     background-color: #fff;
     padding: 49px 54px;
     p:last-child{
       font-weight: 700;
+    }
+    @media screen and (max-width: @mobile){
+      padding: 20px 30px;
     }
   }
   .cart-items{
@@ -429,6 +445,12 @@ body{
   
 }
 @toolpit-width: 200px;
+.tooltip-container{
+  display: inline-block;
+  .tooltip{
+    left: 155px!important;
+  }
+}
 .tooltip{
   max-width: @toolpit-width;
   width: @toolpit-width;

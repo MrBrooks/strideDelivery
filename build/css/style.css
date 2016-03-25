@@ -153,6 +153,7 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 body
 {
+    color: #505050;
     background: #f2f2f0;
 }
 #stride-delivery
@@ -216,17 +217,25 @@ body
 {
     #stride-delivery .btns
     {
+        margin-bottom: 5px;
+
         text-align: center;
     }
     #stride-delivery .btns > button
     {
         float: none;
     }
+    #stride-delivery .btns > button:first-child
+    {
+        margin-right: 2px;
+    }
 }
 #stride-delivery button
 {
     width: 252px;
     height: 93px;
+
+    text-transform: uppercase;
 
     border: 0;
     background-color: #dedede;
@@ -263,7 +272,7 @@ body
 }
 #stride-delivery button:hover
 {
-    background-color: #fdd000;
+    background-color: #fde300;
 }
 #stride-delivery button.active
 {
@@ -370,9 +379,21 @@ body
 }
 #stride-delivery .free-delivery
 {
+    margin-top: 9px;
     padding: 28px 36px;
 
     background-color: #fff;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .free-delivery
+    {
+        padding: 18px 24px;
+    }
+}
+#stride-delivery .free-delivery p
+{
+    margin: 3px;
 }
 #stride-delivery .free-delivery p:last-child
 {
@@ -579,7 +600,7 @@ body
 }
 #stride-delivery .where
 {
-    margin: 10px 0;
+    margin: 5px 0 10px;
     padding: 49px 54px;
 
     background-color: #fff;
@@ -587,6 +608,13 @@ body
 #stride-delivery .where p:last-child
 {
     font-weight: 700;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .where
+    {
+        padding: 20px 30px;
+    }
 }
 #stride-delivery .cart-items
 {
@@ -804,6 +832,14 @@ body
 .mCS-stride-scrollbar .mCSB_draggerRail
 {
     display: none;
+}
+.tooltip-container
+{
+    display: inline-block;
+}
+.tooltip-container .tooltip
+{
+    left: 155px!important;
 }
 .tooltip
 {

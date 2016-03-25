@@ -4,10 +4,10 @@
   <div class="stride-container">
     <div class="left-block">
       <div class="btns">
-        <button id="btn-delivery" class="active"><img src="img/svg/car.svg" alt="" /><span>ДОСТАВКА</span></button>
+        <button id="btn-delivery" class=""><img src="img/svg/car.svg" alt="" /><span>ДОСТАВКА</span></button>
         <button id="btn-self"><img src="img/svg/man.svg" alt="" /><span>САМОВЫВОЗ</span></button>
       </div>
-      <div id="delivery-block" class="active">
+      <div id="delivery-block" class="">
         <div id="moscow" class="delivery-type">
           <div class="checker"><span></span></div>
           <label class="type">Доставка курьером по Москве</label>
@@ -20,25 +20,25 @@
             <form id="form_moscow">
             <div class="stride-field">
               <label>Имя*</label>
-              <input requiredd type="text" />
+              <input requiredd="true" type="text" />
             </div>
             <div class="stride-field">
               <label>Фамилия*</label>
-              <input requiredd type="text" />
+              <input requiredd="true" type="text" />
             </div>
             <div class="stride-field">
               <label>Телефон*</label>
-              <input requiredd type="text" placeholder="+7 ()"/>
+              <input requiredd="true" type="text" placeholder="+7 ()"/>
             </div>
             <div class="stride-field">
               <label>E-mail*</label>
-              <input requiredd type="email" />
+              <input requiredd="true" type="email" />
             </div>
             <div class="stride-field stride-field--address">
               <label>Адрес*</label>
-              <input requiredd type="text" placeholder="Улица"/>
-              <input requiredd type="text" placeholder="Дом"/>
-              <input requiredd type="text" placeholder="Квартира"/>
+              <input requiredd="true" type="text" placeholder="Улица"/>
+              <input requiredd="true" type="text" placeholder="Дом"/>
+              <input requiredd="true" type="text" placeholder="Квартира"/>
             </div>
             </form>
             <p>* Обязательные поля</p>
@@ -52,29 +52,29 @@
             <form id="form_mo">
             <div class="stride-field">
               <label>Имя*</label>
-              <input requiredd type="text" />
+              <input requiredd="true" type="text" />
             </div>
             <div class="stride-field">
               <label>Фамилия*</label>
-              <input requiredd type="text" />
+              <input requiredd="true" type="text" />
             </div>
             <div class="stride-field">
               <label>Телефон*</label>
-              <input requiredd type="text" placeholder="+7 ()"/>
+              <input requiredd="true" type="text" placeholder="+7 ()"/>
             </div>
             <div class="stride-field">
               <label>E-mail*</label>
-              <input requiredd type="email" />
+              <input requiredd="true" type="email" />
             </div>
             <div class="stride-field">
               <label>Населённый пункт*</label>
-              <input requiredd type="email" />
+              <input requiredd="true" type="email" />
             </div>
             <div class="stride-field stride-field--address">
               <label>Адрес*</label>
-              <input requiredd type="text" placeholder="Улица"/>
-              <input requiredd type="text" placeholder="Дом"/>
-              <input requiredd type="text" placeholder="Квартира"/>
+              <input requiredd="true" type="text" placeholder="Улица"/>
+              <input requiredd="true" type="text" placeholder="Дом"/>
+              <input requiredd="true" type="text" placeholder="Квартира"/>
             </div>
             </form>
             <p>* Обязательные поля</p>
@@ -88,34 +88,36 @@
             <form id="form_mail">
             <div class="stride-field">
               <label>Город*</label>
-              <input id="destination_mail" data-status="invalid" requiredd type="text" placeholder="Введите город"/>
+              <input id="destination_mail" data-status="invalid" requiredd="true" type="text" placeholder="Введите город"/>
             </div>
             <div class="stride-field">
               <label>Имя*</label>
-              <input requiredd type="text" />
+              <input requiredd="true" type="text" />
             </div>
             <div class="stride-field">
               <label>Фамилия*</label>
-              <input requiredd type="text" />
+              <input requiredd="true" type="text" />
             </div>
             <div class="stride-field">
               <label>Телефон*</label>
-              <input requiredd type="text" placeholder="+7 ()"/>
+              <input requiredd="true" type="text" placeholder="+7 ()"/>
             </div>
             <div class="stride-field">
               <label>E-mail*</label>
-              <input requiredd type="email" />
+              <input requiredd="true" type="email" />
             </div>
             <div class="stride-field stride-field--big-address">
               <label>Адрес*</label>
               <div class="upper">
-                <input requiredd type="text" placeholder="Населённый пункт"/>
-                <input requiredd type="text" placeholder="Улица"/>
+                <div class="tooltip-container">
+                  <input class="locality" type="text" placeholder="Населённый пункт"/>
+                </div>
+                <input requiredd="true" type="text" placeholder="Улица"/>
               </div>
               <div class="lower">
-                <input requiredd type="text" placeholder="Дом"/>
-                <input requiredd type="text" placeholder="Квартира"/>
-                <input requiredd type="text" placeholder="Индекс"/>
+                <input requiredd="true" type="text" placeholder="Дом"/>
+                <input requiredd="true" type="text" placeholder="Квартира"/>
+                <input requiredd="true" type="text" placeholder="Индекс"/>
               </div> 
             </div>
             </form>
@@ -130,34 +132,36 @@
             <form id="form_ems">
             <div class="stride-field">
               <label>Город*</label>
-              <input id="destination_ems" requiredd data-status="invalid" type="text" placeholder="Введите город"/>
+              <input id="destination_ems" requiredd="true" data-status="invalid" type="text" placeholder="Введите город"/>
             </div>
             <div class="stride-field">
               <label>Имя*</label>
-              <input requiredd type="text" />
+              <input requiredd="true" type="text" />
             </div>
             <div class="stride-field">
               <label>Фамилия*</label>
-              <input requiredd type="text" />
+              <input requiredd="true" type="text" />
             </div>
             <div class="stride-field">
               <label>Телефон*</label>
-              <input requiredd type="text" placeholder="+7 ()"/>
+              <input requiredd="true" type="text" placeholder="+7 ()"/>
             </div>
             <div class="stride-field">
               <label>E-mail*</label>
-              <input requiredd type="email" />
+              <input requiredd="true" type="email" />
             </div>
             <div class="stride-field stride-field--big-address">
               <label>Адрес*</label>
               <div class="upper">
-                <input requiredd type="text" placeholder="Населённый пункт"/>
-                <input requiredd type="text" placeholder="Улица"/>
+                <div class="tooltip-container">
+                  <input class="locality" type="text" placeholder="Населённый пункт"/>
+                </div>
+                <input requiredd="true" type="text" placeholder="Улица"/>
               </div>
               <div class="lower">
-                <input requiredd type="text" placeholder="Дом"/>
-                <input requiredd type="text" placeholder="Квартира"/>
-                <input requiredd type="text" placeholder="Индекс"/>
+                <input requiredd="true" type="text" placeholder="Дом"/>
+                <input requiredd="true" type="text" placeholder="Квартира"/>
+                <input requiredd="true" type="text" placeholder="Индекс"/>
               </div> 
             </div>
             </form>
@@ -174,15 +178,15 @@
         <form id="form_self">
         <div class="stride-field">
           <label>Имя*</label>
-          <input requiredd type="text" placeholder="Введите город"/>
+          <input requiredd="true" type="text" placeholder="Введите город"/>
         </div>
         <div class="stride-field">
           <label>Телефон*</label>
-          <input requiredd type="text" placeholder="+7 ()"/>
+          <input requiredd="true" type="text" placeholder="+7 ()"/>
         </div>
         <div class="stride-field">
           <label>Email*</label>
-          <input requiredd type="email" />
+          <input requiredd="true" type="email" />
         </div>
         </form>
         <div id="delivery-map"></div>
@@ -201,7 +205,7 @@
               <div class="title">Lorem ipsum dolor sit amet.</div>
               <div class="size">Размер: <span>XXL</span></div>
               <div class="amount">Количество: <span>1</span></div>
-              <div class="price">1112 <span>&#8381;</span></div>
+              <div class="price">1 112 <span>&#8381;</span></div>
             </div>
           </div>
           <div class="item">
@@ -212,7 +216,7 @@
               <div class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A neque, labore est! Fuga, quisquam officia.</div>
               <div class="size">Размер: <span>XXL</span></div>
               <div class="amount">Количество: <span>1</span></div>
-              <div class="price">1112 <span>&#8381;</span></div>
+              <div class="price">1 112 <span>&#8381;</span></div>
             </div>
           </div>
           <div class="item">
@@ -223,7 +227,7 @@
               <div class="title">Lorem ipsum dolor sit amet.</div>
               <div class="size">Размер: <span>XXL</span></div>
               <div class="amount">Количество: <span>1</span></div>
-              <div class="price">1112 <span>&#8381;</span></div>
+              <div class="price">1 112 <span>&#8381;</span></div>
             </div>
           </div>
           <div class="item">
@@ -234,7 +238,7 @@
               <div class="title">Lorem ipsum dolor sit amet.</div>
               <div class="size">Размер: <span>XXL</span></div>
               <div class="amount">Количество: <span>1</span></div>
-              <div class="price">1112 <span>&#8381;</span></div>
+              <div class="price">1 112 <span>&#8381;</span></div>
             </div>
           </div>
           <div class="item">
@@ -245,7 +249,7 @@
               <div class="title">Lorem ipsum dolor sit amet.</div>
               <div class="size">Размер: <span>XXL</span></div>
               <div class="amount">Количество: <span>1</span></div>
-              <div class="price">1112 <span>&#8381;</span></div>
+              <div class="price">1 112 <span>&#8381;</span></div>
             </div>
           </div>
           <div class="item">
@@ -256,7 +260,7 @@
               <div class="title">Lorem ipsum dolor sit amet.</div>
               <div class="size">Размер: <span>XXL</span></div>
               <div class="amount">Количество: <span>1</span></div>
-              <div class="price">1112 <span>&#8381;</span></div>
+              <div class="price">1 112 <span>&#8381;</span></div>
             </div>
           </div>
           <div class="item">
@@ -267,17 +271,17 @@
               <div class="title">Lorem ipsum dolor sit amet.</div>
               <div class="size">Размер: <span>XXL</span></div>
               <div class="amount">Количество: <span>1</span></div>
-              <div class="price">1112 <span>&#8381;</span></div>
+              <div class="price">1 112 <span>&#8381;</span></div>
             </div>
           </div>
         </div>
       </div>
       <div class="sum">
-        <div class="order-sum">Сумма заказа <span>6632&#8381;</span></div>
+        <div class="order-sum">Сумма заказа <span>6 632&#8381;</span></div>
         <div class="delivery-sum">Стоимость доставки <span>300&#8381;</span></div>
       </div>
       <div class="final">
-        Итого: <span>12431 &#8381;</span>
+        Итого: <span>12 431 &#8381;</span>
       </div>
       <div class="btns">
         <button id="delivery-submit" class="btn-sumbit" type="submit" form="form_mo">Продолжить</button>
