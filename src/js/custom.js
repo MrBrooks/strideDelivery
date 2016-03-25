@@ -40,14 +40,34 @@ $(document).ready(function() {
       $("#delivery-submit").attr("form", "form_self");
     });
     btn_delivery.on("click touchstart",activateDelivery);
-    
     delivery_types.on("click touchstart", deliveryTypeClick);
-    
     
     return this;
 
   };
 })( jQuery );
+
+(function( $ ){
+
+  $.fn.priceFormat = function(n, separ, symb) {
+  
+    return this.each(function() {
+      var nums = $(this).text().split("").reverse(), m = Math.floor(nums.length / n), result="";
+      for(var i = 0; i < m; i++){
+        nums.splice((i+1)*n, 0, separ);
+      }
+      nums.splice(0,0,symb.valueOf()," ");
+      nums = nums.reverse();
+      for(var i = 0; i < nums.length; i++){
+        result += nums[i];
+      }
+      $(this).text(result);
+    });
+  };
+})( jQuery );
+
+// MRBROOKS COMMEN: красивое форматирование цен - нужно только число, пробелы и символ рубля выставятся автоматом
+$(".rub-format").priceFormat(3," ","\u20BD");
 
 function initAutocomplete(selector){
   var list = $("#destinations-list>li"), list_text = [], timer, self = $(selector);
@@ -122,7 +142,7 @@ if($(window).width() < 979){
 }
 
 
-
+// MRBROOKS COMMENT: валидация формы
 $("form").submit(function(){
   var form = $(this), isValid = true, anotherTooltip = true;
   inputs = form.find("input");
@@ -135,7 +155,7 @@ $("form").submit(function(){
   }
   
   inputs.each(function(){
-    if($(this).attr("requiredd") == "true" && $(this).val().length == 0){
+    if($(this).attr("requiredd") == "true" && $(this).val().length === 0){
       isValid = false;
       $(this).addClass('invalid');
     } else if($(this).attr('data-status') == 'invalid'){
