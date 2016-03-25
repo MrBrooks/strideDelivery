@@ -1,0 +1,854 @@
+/**************************************/
+/* Styles (LESS/CSS) files supervisor */
+/**************************************/
+/* Third party */
+@import '../../bower_components/tooltip/bootstrap.css';
+@import '../../bower_components/custom-scrollbar/jquery.mCustomScrollbar.css';
+/* Custom */
+/***************************************************/
+/* Set custom or change third-party Less variables */
+/***************************************************/
+/* Third party */
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+/*
+The `retina-sprite` class sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+@icon-home-group: 'icon-home' @icon-home @icon-home-2x;
+
+.icon-home {
+  .retina-sprite(@icon-home-group);
+}
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+/*
+The `.retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in LESS
+
+.retina-sprites(@retina-groups);
+*/
+.svg-sprite--html5
+{
+    width: 47px;
+    height: 47px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 47px 47px;
+}
+.no-svg .svg-sprite--html5
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.png-sprite:before
+{
+    display: inline-block;
+
+    content: '';
+}
+.png-sprite--html5:before
+{
+    width: 32px;
+    height: 32px;
+
+    background-image: url(../img/sprites/png/png-sprite.png);
+    background-position: 0 0;
+}
+.png-sprite--html5-retina:before
+{
+    width: 32px;
+    height: 32px;
+
+    background-image: url(../img/sprites/png/png-sprite.png);
+    background-position: 0 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+{
+    .png-sprite--html5-retina:before
+    {
+        background-image: url(../img/sprites/png/png-sprite-2x.png);
+        background-size: 32px 32px;
+    }
+}
+.svg-sprite:before
+{
+    display: inline-block;
+
+    width: 32px!important;
+    height: 32px!important;
+
+    content: '';
+
+    background-size: contain!important;
+}
+.svg-sprite--html5-icon:before
+{
+    width: 47px;
+    height: 47px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 47px 47px;
+}
+.no-svg .svg-sprite--html5-icon:before
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.prettyprint
+{
+    white-space: inherit;
+}
+.prettyprint ol li
+{
+    list-style-type: inherit;
+}
+.navbar .navbar-nav > li > iframe
+{
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.navbar .navbar-nav > li > .social-likes
+{
+    margin-top: 15px!important;
+    margin-left: 15px!important;
+}
+body
+{
+    background: #f2f2f0;
+}
+#stride-delivery
+{
+    width: 824px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery
+    {
+        width: 100%;
+    }
+}
+#stride-delivery > *
+{
+    -webkit-transition: all 500ms;
+            transition: all 500ms;
+}
+#stride-delivery h2
+{
+    font-size: 24px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery h2
+    {
+        font-size: 17px;
+
+        text-align: center;
+    }
+}
+#stride-delivery .left-block
+{
+    display: inline-block;
+
+    width: 509px;
+
+    vertical-align: top;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .left-block
+    {
+        width: 100%;
+    }
+}
+#stride-delivery .right-block
+{
+    display: inline-block;
+
+    width: 308px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .right-block
+    {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .btns
+    {
+        text-align: center;
+    }
+    #stride-delivery .btns > button
+    {
+        float: none;
+    }
+}
+#stride-delivery button
+{
+    width: 252px;
+    height: 93px;
+
+    border: 0;
+    background-color: #dedede;
+    box-shadow: none;
+
+    -webkit-appearance: none;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery button
+    {
+        width: 49%;
+    }
+}
+#stride-delivery button img
+{
+    margin-right: 19px;
+
+    opacity: .7;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery button img
+    {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery button span
+    {
+        display: block;
+    }
+}
+#stride-delivery button:hover
+{
+    background-color: #fdd000;
+}
+#stride-delivery button.active
+{
+    font-weight: 700;
+
+    background-color: #fde300;
+}
+#stride-delivery button.active img
+{
+    opacity: 1;
+}
+#stride-delivery button:focus
+{
+    outline: none;
+}
+#stride-delivery #delivery-block,
+#stride-delivery #self-block
+{
+    display: none;
+}
+#stride-delivery #delivery-block.active,
+#stride-delivery #self-block.active
+{
+    display: block;
+}
+#stride-delivery .delivery-type
+{
+    position: relative;
+
+    margin-bottom: 5px;
+}
+#stride-delivery .delivery-type:first-child
+{
+    margin-top: 4px;
+}
+#stride-delivery .delivery-type p
+{
+    margin: 15px 0;
+}
+#stride-delivery .delivery-type .type
+{
+    font-weight: 700;
+
+    display: block;
+
+    width: 100%;
+    height: 57px;
+    padding: 20px 61px;
+    padding-right: 0;
+
+    cursor: pointer;
+
+    background-color: #fff;
+}
+#stride-delivery .delivery-type .type:hover
+{
+    background-color: #fde300;
+}
+#stride-delivery .delivery-type.active .delivery-content
+{
+    display: block;
+}
+#stride-delivery .delivery-type.active .type
+{
+    background-color: #fde300;
+}
+#stride-delivery .delivery-type.active .checker
+{
+    background-color: #fff;
+}
+#stride-delivery .delivery-type.active .checker span
+{
+    display: block;
+}
+#stride-delivery .delivery-content
+{
+    display: none;
+}
+#stride-delivery .checker
+{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+    width: 26px;
+    height: 26px;
+
+    border-radius: 50%;
+    background-color: #dedede;
+}
+#stride-delivery .checker span
+{
+    position: absolute;
+    top: 9px;
+    left: 9px;
+
+    display: none;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background-color: #000;
+}
+#stride-delivery .free-delivery
+{
+    padding: 28px 36px;
+
+    background-color: #fff;
+}
+#stride-delivery .free-delivery p:last-child
+{
+    font-weight: 700;
+}
+#stride-delivery .stride-field
+{
+    height: 30px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field
+    {
+        height: auto;
+    }
+}
+#stride-delivery .stride-field label
+{
+    padding: 5px 0;
+
+    color: #515151;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field label
+    {
+        display: block;
+
+        width: 100%;
+    }
+}
+#stride-delivery .stride-field input
+{
+    float: right;
+
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+
+    border: 0;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field input
+    {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+#stride-delivery .stride-field input:focus
+{
+    outline: none;
+}
+#stride-delivery .stride-field input.invalid
+{
+    border: 2px solid #ef5455;
+}
+#stride-delivery .stride-field--address
+{
+    height: 65px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--address
+    {
+        height: auto;
+    }
+}
+#stride-delivery .stride-field--address label
+{
+    display: inline-block;
+
+    width: 100%;
+}
+#stride-delivery .stride-field--address input:nth-child(2)
+{
+    float: left;
+
+    width: 248px;
+    margin-right: 6px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--address input:nth-child(2)
+    {
+        width: 100%;
+    }
+}
+#stride-delivery .stride-field--address input:nth-child(3)
+{
+    float: none;
+
+    width: 123px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--address input:nth-child(3)
+    {
+        width: 49%;
+    }
+}
+#stride-delivery .stride-field--address input:nth-child(4)
+{
+    width: 125px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--address input:nth-child(4)
+    {
+        width: 49%;
+    }
+}
+#stride-delivery .stride-field--big-address
+{
+    height: 100px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--big-address
+    {
+        height: auto;
+    }
+}
+#stride-delivery .stride-field--big-address label
+{
+    display: inline-block;
+
+    width: 100%;
+}
+#stride-delivery .stride-field--big-address .upper
+{
+    height: 30px;
+    margin-bottom: 10px;
+}
+#stride-delivery .stride-field--big-address .upper input:nth-child(1)
+{
+    float: left;
+
+    width: 248px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--big-address .upper input:nth-child(1)
+    {
+        width: 100%;
+    }
+}
+#stride-delivery .stride-field--big-address .upper input:nth-child(2)
+{
+    width: 248px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--big-address .upper input:nth-child(2)
+    {
+        width: 100%;
+    }
+}
+#stride-delivery .stride-field--big-address .lower input:nth-child(1)
+{
+    float: left;
+
+    width: 175px;
+    margin-right: 10px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--big-address .lower input:nth-child(1)
+    {
+        width: 100%;
+    }
+}
+#stride-delivery .stride-field--big-address .lower input:nth-child(2)
+{
+    float: none;
+
+    width: 157px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--big-address .lower input:nth-child(2)
+    {
+        width: 49%;
+    }
+}
+#stride-delivery .stride-field--big-address .lower input:nth-child(3)
+{
+    float: right;
+
+    width: 157px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .stride-field--big-address .lower input:nth-child(3)
+    {
+        width: 49%;
+    }
+}
+#stride-delivery #delivery-map
+{
+    width: 100%;
+    height: 445px;
+}
+#stride-delivery .where
+{
+    margin: 10px 0;
+    padding: 49px 54px;
+
+    background-color: #fff;
+}
+#stride-delivery .where p:last-child
+{
+    font-weight: 700;
+}
+#stride-delivery .cart-items
+{
+    height: auto;
+    max-height: 550px;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .cart-items
+    {
+        display: none;
+    }
+}
+#stride-delivery .cart-items .item
+{
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #bdbdbd;
+}
+#stride-delivery .cart-items .item > div
+{
+    display: inline-block;
+
+    vertical-align: top;
+}
+#stride-delivery .cart-items .item:last-child
+{
+    margin-bottom: 0;
+
+    border: 0;
+}
+#stride-delivery .cart-items .info
+{
+    width: 150px;
+    padding-left: 9px;
+}
+#stride-delivery .cart-items .title
+{
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+    color: #515151;
+}
+#stride-delivery .cart-items .price
+{
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #515151;
+}
+#stride-delivery .cart-items .amount
+{
+    margin-bottom: 10px;
+}
+#stride-delivery .cart
+{
+    margin-bottom: 10px;
+    padding: 14px 0 14px 14px;
+
+    background-color: #dedede;
+}
+#stride-delivery .cart label
+{
+    font-weight: 700;
+
+    position: relative;
+
+    display: block;
+
+    margin: 10px 0;
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .cart label
+    {
+        cursor: pointer;
+    }
+}
+#stride-delivery .cart label:after
+{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+    display: none;
+
+    width: 18px;
+    height: 11px;
+
+    content: '';
+    -webkit-transition: all 300ms;
+            transition: all 300ms;
+
+    background-image: url(../img/svg/arrow-down.svg);
+}
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .cart label:after
+    {
+        display: block;
+    }
+}
+#stride-delivery .cart.active .cart-items
+{
+    display: block;
+}
+#stride-delivery .cart.active label:after
+{
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+#stride-delivery .cart.active label
+{
+    margin-top: 5px;
+}
+#stride-delivery .sum,
+#stride-delivery .final
+{
+    font-size: 16px;
+    font-weight: 700;
+
+    height: 83px;
+    margin-bottom: 10px;
+    padding: 23px 25px;
+
+    background-color: #dedede;
+}
+#stride-delivery .sum span,
+#stride-delivery .final span
+{
+    float: right;
+}
+#stride-delivery .final
+{
+    font-size: 20px;
+
+    padding: 28px 25px;
+
+    text-transform: uppercase;
+}
+#stride-delivery .final span
+{
+    font-size: 24px;
+
+    float: right;
+}
+#stride-delivery .btn-sumbit
+{
+    font-weight: 700;
+
+    float: right;
+
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+
+    background-color: #fde300;
+}
+#destinations-list
+{
+    display: none;
+}
+.ui-autocomplete
+{
+    overflow-y: auto;
+
+    width: 300px;
+    max-height: 100px;
+    padding: 0;
+
+    list-style-type: none;
+
+    background-color: #fff;
+}
+.ui-autocomplete li
+{
+    padding-left: 5px;
+
+    color: #505050;
+}
+.ui-autocomplete li:hover
+{
+    font-weight: 700;
+
+    color: black;
+    background-color: #fde300;
+}
+.ui-autocomplete .stride-tooltip
+{
+    background-color: red;
+}
+.mCS-stride-scrollbar .mCSB_dragger
+{
+    height: 63px;
+
+    border-radius: 10px;
+    background-color: #4d4d4d;
+}
+.mCS-stride-scrollbar .mCSB_dragger_bar
+{
+    display: none;
+
+    background-color: none;
+}
+.mCS-stride-scrollbar .mCSB_draggerContainer
+{
+    width: 12px;
+
+    border-radius: 10px;
+    background-color: #cacaca;
+}
+.mCS-stride-scrollbar .mCSB_draggerRail
+{
+    display: none;
+}
+.tooltip
+{
+    font-size: 15px;
+    font-weight: 400;
+
+    left: 413px!important;
+
+    width: 200px;
+    max-width: 200px;
+}
+.tooltip.empty
+{
+    margin-top: 33px;
+}
+.tooltip-inner
+{
+    position: relative;
+    left: 95px;
+
+    width: 200px;
+    max-width: 200px;
+    padding: 10px 20px;
+
+    text-align: left;
+
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, .8);
+}
+.tooltip-arrow
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+    margin-top: -5px;
+
+    opacity: .8;
+    border-width: 5px 0 5px 5px;
+    border-width: 5px 7px 0 1px!important;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: #000;
+    border-bottom-color: rgba(0, 0, 0, .8);
+    border-left-color: #000;
+}
