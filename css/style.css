@@ -270,17 +270,15 @@ body
         display: block;
     }
 }
+#stride-delivery button.active,
 #stride-delivery button:hover
-{
-    background-color: #fde300;
-}
-#stride-delivery button.active
 {
     font-weight: 700;
 
     background-color: #fde300;
 }
-#stride-delivery button.active img
+#stride-delivery button.active img,
+#stride-delivery button:hover img
 {
     opacity: 1;
 }
@@ -775,6 +773,10 @@ body
     margin-bottom: 10px;
 
     background-color: #fde300;
+}
+#stride-delivery .btn-sumbit:hover
+{
+    background-color: #fdd000;
 }
 #destinations-list
 {
