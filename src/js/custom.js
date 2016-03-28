@@ -33,7 +33,9 @@ $(document).ready(function() {
     }
     function deliveryTypeClick(){
       var parent = $(this).parent();
+      var other_content = parent.siblings().children(".delivery-content");
       var content = parent.children(".delivery-content");
+      other_content.slideUp(slidespeed);
       content.slideToggle(slidespeed, function(){
         parent.toggleClass("active").siblings().removeClass("active");
       });
