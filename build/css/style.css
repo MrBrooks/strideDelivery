@@ -597,6 +597,13 @@ body
     width: 100%;
     height: 445px;
 }
+@media screen and (max-width: 979px)
+{
+    #stride-delivery #delivery-map
+    {
+        display: none;
+    }
+}
 #stride-delivery .where
 {
     margin: 5px 0 10px;
