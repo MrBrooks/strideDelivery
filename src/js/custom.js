@@ -16,23 +16,28 @@ $(document).ready(function() {
         btn_self = this.find("#btn-self"),
         block_delivery = this.find("#delivery-block"),
         block_self = this.find("#self-block"),
-        delivery_types = this.find(".delivery-type>.type");
+        delivery_types = this.find(".delivery-type>.type"),
+        slidespeed = 250;
     
     function activateDelivery(){
-      block_delivery.addClass("active");
+      block_delivery.slideDown(slidespeed).addClass("active");
       btn_delivery.addClass("active");
       btn_self.removeClass("active");
-      block_self.removeClass("active");
+      block_self.slideUp(slidespeed).removeClass("active");
     }
     function activateSelf(){
-      block_delivery.removeClass("active");
+      block_delivery.slideUp(slidespeed).removeClass("active");
       btn_delivery.removeClass("active");
       btn_self.addClass("active");
-      block_self.addClass("active");
+      block_self.slideDown(slidespeed).addClass("active");
     }
     function deliveryTypeClick(){
       var parent = $(this).parent();
-      parent.toggleClass("active").siblings().removeClass("active");
+      var content = parent.children(".delivery-content");
+      content.slideToggle(slidespeed, function(){
+        parent.toggleClass("active").siblings().removeClass("active");
+      });
+      
       $("#delivery-submit").attr("form", "form_"+parent.attr("id"));
     }
     btn_self.on("click touchstart",function(){
@@ -65,6 +70,13 @@ $(document).ready(function() {
     });
   };
 })( jQuery );
+
+// MRBROOKS COMMEN: форматирование телефона
+
+$('.phone').formatter({
+  'pattern': '+7 ({{999}}) {{999}}-{{99}}-{{99}}',
+  'persistent': false
+});
 
 // MRBROOKS COMMEN: красивое форматирование цен - нужно только число, пробелы и символ рубля выставятся автоматом
 $(".rub-format").priceFormat(3," ","\u20BD");
