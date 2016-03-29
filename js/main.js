@@ -15234,8 +15234,11 @@ function initAutocomplete(selector){
 
 function mobileInit(){
   var cart = $("#cart");
+  cart_items = cart.children("#cart-items");
   cart.children("label").on("touchend",function(){
-    cart.toggleClass("active");
+    cart_items.slideToggle(300, function(){
+      cart.toggleClass("active");
+    });
   });
 }
 
