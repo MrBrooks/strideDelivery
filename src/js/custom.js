@@ -30,13 +30,12 @@ function screenType(desktop, tablet, mobile){
         block_delivery = this.find("#delivery-block"),
         block_self = this.find("#self-block"),
         delivery_types = this.find(".delivery-type>.type"),
-        slidespeed = 250;
+        slidespeed = 250, noEventFlag = true;
     
     function activateDelivery(){
-      var flag = true;
-      if(flag){
-        flag = false;
-        setTimeout(function(){flag = true},100);
+      if(noEventFlag){
+        noEventFlag = false;
+        setTimeout(function(){noEventFlag = true; },100);
         block_delivery.slideDown(slidespeed).addClass("active");
         btn_delivery.addClass("active");
         btn_self.removeClass("active");
@@ -44,10 +43,9 @@ function screenType(desktop, tablet, mobile){
       }
     }
     function activateSelf(){
-      var flag = true;
-      if(flag){
-        flag = false;
-        setTimeout(function(){flag = true},100);
+      if(noEventFlag){
+        noEventFlag = false;
+        setTimeout(function(){noEventFlag = true;},100);
         block_delivery.slideUp(slidespeed).removeClass("active");
         btn_delivery.removeClass("active");
         btn_self.addClass("active");
@@ -58,11 +56,10 @@ function screenType(desktop, tablet, mobile){
 
       var parent = $(this).parent();
       var other_content = parent.siblings().children(".delivery-content"),
-          content = parent.children(".delivery-content"),
-          flag = true;
-      if(flag){
-        flag = false;
-        setTimeout(function(){flag = true},100);
+          content = parent.children(".delivery-content");
+      if(noEventFlag){
+        noEventFlag = false;
+        setTimeout(function(){noEventFlag = true;},100);
         other_content.slideUp(slidespeed);
         content.slideToggle(slidespeed, function(){
           parent.toggleClass("active").siblings().removeClass("active");
@@ -73,12 +70,12 @@ function screenType(desktop, tablet, mobile){
     }
 
     function init(){
-      var event;
-      if(screenType(1024,768) === "desktop"){
-        event = "click";
-      } else{
-        event = "touchend"
-      }
+      var event = "click tap";
+      // if(screenType(1024,768) === "desktop"){
+      //   event = "click";
+      // } else{
+      //   event = "touchend";
+      // }
 
       btn_self.on(event,function(){
         activateSelf();
@@ -106,7 +103,7 @@ function screenType(desktop, tablet, mobile){
       }
       nums.splice(0,0,symb.valueOf()," ");
       nums = nums.reverse();
-      for(var i = 0; i < nums.length; i++){
+      for(i = 0; i < nums.length; i++){
         result += nums[i];
       }
       $(this).text(result);
