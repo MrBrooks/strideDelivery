@@ -35,7 +35,7 @@ function screenType(desktop, tablet, mobile){
     function activateDelivery(){
       if(noEventFlag){
         noEventFlag = false;
-        setTimeout(function(){noEventFlag = true; },100);
+        setTimeout(function(){noEventFlag = true; },500);
         block_delivery.slideDown(slidespeed).addClass("active");
         btn_delivery.addClass("active");
         btn_self.removeClass("active");
@@ -45,7 +45,7 @@ function screenType(desktop, tablet, mobile){
     function activateSelf(){
       if(noEventFlag){
         noEventFlag = false;
-        setTimeout(function(){noEventFlag = true;},100);
+        setTimeout(function(){noEventFlag = true;},500);
         block_delivery.slideUp(slidespeed).removeClass("active");
         btn_delivery.removeClass("active");
         btn_self.addClass("active");
@@ -59,7 +59,7 @@ function screenType(desktop, tablet, mobile){
           content = parent.children(".delivery-content");
       if(noEventFlag){
         noEventFlag = false;
-        setTimeout(function(){noEventFlag = true;},100);
+        setTimeout(function(){noEventFlag = true;},500);
         other_content.slideUp(slidespeed);
         content.slideToggle(slidespeed, function(){
           parent.toggleClass("active").siblings().removeClass("active");
@@ -175,7 +175,7 @@ function mobileInit(){
   cart.children("label").on("click tap",function(){
     if(flag){
       flag = false;
-      setTimeout(function(){flag = true;},100);
+      setTimeout(function(){flag = true;},500);
       cart_items.slideToggle(300, function(){
         cart.toggleClass("active");
       });
