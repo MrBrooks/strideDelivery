@@ -333,6 +333,13 @@ body
 {
     background-color: #fde300;
 }
+@media screen and (max-width: 979px)
+{
+    #stride-delivery .delivery-type .type:hover
+    {
+        background-color: white;
+    }
+}
 #stride-delivery .delivery-type.active .delivery-content
 {
     display: block;
