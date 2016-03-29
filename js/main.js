@@ -17236,12 +17236,16 @@ function initAutocomplete(selector){
 }
 
 function mobileInit(){
-  var cart = $("#cart");
+  var cart = $("#cart"), flag = true;
   cart_items = cart.children("#cart-items");
-  cart.children("label").on("touchend",function(){
-    cart_items.slideToggle(300, function(){
-      cart.toggleClass("active");
-    });
+  cart.children("label").on("click tap",function(){
+    if(flag){
+      flag = false;
+      setTimeout(function(){flag = true;},100);
+      cart_items.slideToggle(300, function(){
+        cart.toggleClass("active");
+      });
+    }
   });
 }
 
